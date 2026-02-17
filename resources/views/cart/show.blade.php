@@ -53,22 +53,54 @@
         <form action="{{ route('checkout.process') }}" method="POST">
           @csrf
           <h5>Customer Information</h5>
+
+          {{-- Display general validation errors if any --}}
+          {{-- @if ($errors->any())
+          <div class="alert alert-danger">
+            <ul class="mb-0">
+              @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+          @endif --}}
+
           <div class="mb-3">
             <label for="customer_name" class="form-label">Name *</label>
-            <input type="text" class="form-control" name="customer_name" required>
+            <input type="text" class="form-control @error('customer_name') is-invalid @enderror" name="customer_name"
+              value="{{ old('customer_name') }}" required>
+            @error('customer_name')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label for="customer_email" class="form-label">Email *</label>
-            <input type="email" class="form-control" name="customer_email" required>
+            <input type="email" class="form-control @error('customer_email') is-invalid @enderror" name="customer_email"
+              value="{{ old('customer_email') }}" required>
+            @error('customer_email')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label for="customer_phone" class="form-label">Phone *</label>
-            <input type="text" class="form-control" name="customer_phone" required>
+            <input type="text" class="form-control @error('customer_phone') is-invalid @enderror" name="customer_phone"
+              value="{{ old('customer_phone') }}" required>
+            @error('customer_phone')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label for="address" class="form-label">Shipping Address *</label>
-            <textarea class="form-control" name="address" rows="2" required></textarea>
+            <textarea class="form-control @error('address') is-invalid @enderror" name="address" rows="2"
+              required>{{ old('address') }}</textarea>
+            @error('address')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <button type="submit" class="btn btn-success">Proceed to Checkout</button>
         </form>
       </div>

@@ -23,7 +23,7 @@ A simple e‑commerce website built with Laravel, featuring product listing, AJA
 
     # git clone <https://github.com/mubeen135/mini-ecommerce-project.git>
 
-    # cd mini-ecommerce
+    # cd mini-ecommerce-project
 
 2. **Install PHP dependencies**
 

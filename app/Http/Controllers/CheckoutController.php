@@ -21,7 +21,7 @@ class CheckoutController extends Controller
 
         $request->validate([
             'customer_name' => 'required|string|max:255',
-            'customer_email' => 'required|email|max:255',
+            'customer_email' => 'required|email:rfc,dns|max:255',
             'customer_phone' => 'required|string|max:10',
             'address' => 'required|string|max:500',
         ]);
