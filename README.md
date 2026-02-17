@@ -21,38 +21,38 @@ A simple e‑commerce website built with Laravel, featuring product listing, AJA
 
 1. **Clone the repository**
 
-    git clone <https://github.com/mubeen135/mini-ecommerce-project.git>
-    cd mini-ecommerce
+    #git clone <https://github.com/mubeen135/mini-ecommerce-project.git>
+    #cd mini-ecommerce
 
 2. **Install PHP dependencies**
 
-    composer install
+    #composer install
 
 3. **Environment setup**
 
-    Copy .env.example to .env
+    #Copy .env.example to .env
 
-    Generate application key:
-    php artisan key:generate
+    #Generate application key:
+    #php artisan key:generate
 
 4. **Database configuration**
 
-    Create a database (e.g., mini_ecommerce)
-    Update .env with your database credentials:
+    #Create a database (e.g., mini_ecommerce)
+    #Update .env with your database credentials:
 
-    DB_DATABASE=mini_ecommerce
-    DB_USERNAME=root
-    DB_PASSWORD=
+    #DB_DATABASE=mini_ecommerce
+    #DB_USERNAME=root
+    #DB_PASSWORD=
 
 5. **Run migrations and seeders**
 
-    php artisan migrate --seed
+    #php artisan migrate --seed
 
 6. **Add Stripe keys**
 
-    STRIPE_KEY=your_stripe_key_here
-    STRIPE_SECRET=your_stripe_key_here
+    #STRIPE_KEY=your_stripe_key_here
+    #STRIPE_SECRET=your_stripe_key_here
 
 7. **Start the server**
 
-    php artisan serve
+    #php artisan serve
