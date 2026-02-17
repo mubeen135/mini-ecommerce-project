@@ -21,7 +21,7 @@ A simple e‑commerce website built with Laravel, featuring product listing, AJA
 
 1. **Clone the repository**
 
-    git clone <https://github.com/mubeen135/mini-ecommerce.git>
+    git clone <https://github.com/mubeen135/mini-ecommerce-project.git>
     cd mini-ecommerce
 
 2. **Install PHP dependencies**
